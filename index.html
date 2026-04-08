@@ -10,33 +10,51 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <title>Document</title>
+    <title>Find</title>
+    <style type="text/tailwindcss">
+        @theme{
+        --font-poppins: "Poppins", sans-serif;
+     }
+    </style>
 </head>
 
-<body class="bg-gray-950 text-gray-300">
+<body class="bg-gray-950 text-gray-300 font-poppins">
 
     <main class="max-h-screen p-10 flex flex-col justify-center items-center gap-15">
         <div class="search-box ">
-            <input type="text" class="border text-xl  border-gray-300 w-md p-2 rounded-xl mr-3">
+            <input type="text"
+                class="border text-xl font-medium  border-gray-300 w-md p-2 rounded-xl mr-3 focus:bg-gray-900">
             <button
-                class="border border-gray-300 text-xl font-semibold rounded-md px-4 py-2 rounded-xl cursor-pointer">Search</button>
+                class="border border-gray-300 text-xl text-white rounded-md px-4 py-2 rounded-xl cursor-pointer bg-green-700 hover:bg-green-600">Search</button>
         </div>
         <div class="flex justify-between gap-15">
-            <div class="profile border border-gray-300 px-5 py-3 w-md rounded-xl">
-                <h2 class="text-xl font-bold  text-center text-gray-600">@corenitin</h2>
+            <div class="profile border border-gray-300 px-10 py-5 w-md rounded-xl">
+                <h2 class="text-xl font-bold  text-center text-gray-500">
+                    <a id="username-link" class="hover:text-gray-400" href="https://github.com/corenitin" target="_blank">corenitin</a>
+                </h2>
                 <div class="flex justify-center mt-4">
                     <img class="rounded-[50%]" src="https://avatars.githubusercontent.com/u/152731976?v=4" alt=""
                         width="200">
                 </div>
-                <p id="name">nitin</p>
-                <p id="bio">maru name nitin che</p>
-                <p id="followers">followers: 6</p>
-                <p id="following">following: 12</p>
-                <p id="repositories">repositories: 49</p>
-            </div>
-            <div class="w-4xl border border-gray-300 px-5 py-3 rounded-xl">
-                <h2>Repositories</h2>
-                <div></div>
+                <div class="flex flex-col items-center mt-4">
+                    <p class="font-medium text-xl text-gray-200" id="name">Nitin Parmar</p>
+                    <p class="text-md text-gray-700 text-center" id="bio">Frontend Developer maru name nitin che</p>
+                </div>
+                <div
+                    class="mt-5 flex gap-5 justify-center text-md font-semibold text-gray-200 hover:text-blue-500 cursor-pointer ">
+                    <a href="https://github.com/corenitin?tab=followers" target="_blank">Followers:</a>
+                    <p id="followers">6</p>
+                </div>
+                <div
+                    class="flex gap-5 justify-center text-md font-semibold text-gray-200 hover:text-blue-500 cursor-pointer ">
+                    <a href="https://github.com/corenitin?tab=following" target="_blank">Following:</a>
+                    <p id="following">12</p>
+                </div>
+                <div
+                    class="flex gap-5 justify-center text-md font-semibold text-gray-200 hover:text-blue-500 cursor-pointer ">
+                    <a href="hhttps://github.com/corenitin?tab=repositories" target="_blank">Repositories:</a>
+                    <p id="repositories">49</p>
+                </div>
             </div>
 
         </div>
