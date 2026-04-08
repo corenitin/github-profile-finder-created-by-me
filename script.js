@@ -2,7 +2,7 @@ const githubApiUrl = "https://api.github.com/users/"
 const inputBar = document.querySelector("input")
 const searchBtn = document.querySelector("button")
 const avatar = document.querySelector("img")
-const userName = document.querySelector("h1")
+const userName = document.querySelector("h2")
 const nameOfuser = document.querySelector("#name")
 const bioOfuser = document.querySelector("#bio")
 const followersOfUser = document.querySelector("#followers")
@@ -23,6 +23,7 @@ async function findUser(user) {
     followersOfUser.textContent = `Followers: ${userData.followers}`
     followingOfUser.textContent = `Following: ${userData.following}`
     repoOfUser.textContent = `Repositories: ${userData.public_repos}`
+    inputBar.value = ""
 }
 
 inputBar.addEventListener('keydown', (e) => {
