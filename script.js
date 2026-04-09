@@ -39,7 +39,7 @@ async function findUser(user) {
 
 inputBar.addEventListener('keydown', (e) => {
     if (e.key === "Enter") {
-        findUser(inputBar.value)
+        findUser(inputBar.value.toLowerCase())
     }
 
 })
