@@ -18,7 +18,7 @@
         --breakpoint-mobile: 320px
      }
      .profile-box {
-        @apply  border border-gray-300 px-10 py-5 md:w-sm  rounded-xl bg-gray-950/25
+        @apply  border border-gray-300 px-10 py-5 md:w-sm mobile:w-[300px]  rounded-xl bg-gray-950/25
      }
     </style>
 </head>
@@ -31,11 +31,11 @@
         </video>
         <div class="relative z-[1] flex items-center">
             <input type="text"
-                class="border text-xl font-medium  border-gray-300 mobile:w-[200px] mobile:rounded-sm md:w-sm md:p-2 md:rounded-xl mr-3 ">
+                class="border md:text-xl mobile:text-sm mobile:px-2 mobile:py-1 font-medium  border-gray-300 mobile:w-[200px] mobile:rounded-sm md:w-sm md:p-2 md:rounded-xl mr-3 ">
             <button
                 class="border border-gray-300 md:font-medium md:text-xl mobile:text-sm text-white mobile:rounded-sm md:rounded-xl md:px-4 mobile:px-2 mobile:py-1 md:py-2 cursor-pointer bg-green-700 hover:bg-green-600">Search</button>
         </div>
-        <div class="flex justify-between gap-15 relative z-[1]">
+        <div class=" relative z-[1]">
             <div id="profile-box">
                 <h2 class="text-xl font-bold  text-center text-gray-500">
                     <a id="username-link" class="hover:text-gray-300" href="" target="_blank"></a>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="flex flex-col items-center mt-4">
                     <p class="font-medium text-xl text-gray-200" id="name"></p>
-                    <p class="text-md text-gray-700 text-center" id="bio"></p>
+                    <p class="mobile:text-sm md:text-md text-gray-700 text-center" id="bio"></p>
                 </div>
                 <div
                     class="mt-5 mb-2 flex gap-5 justify-center text-md font-medium text-gray-200 hover:text-blue-500 cursor-pointer ">
