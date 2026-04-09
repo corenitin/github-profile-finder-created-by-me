@@ -1,14 +1,14 @@
 const githubApiUrl = "https://api.github.com/users/"
 const inputBar = document.querySelector("input")
 const searchBtn = document.querySelector("button")
-const userLink = document.getElementById("username-link")
+const userAcLink = document.getElementById("username-link")
 const avatar = document.querySelector("img")
-const userName = document.querySelector("h2")
 const nameOfuser = document.querySelector("#name")
 const bioOfuser = document.querySelector("#bio")
 const followersOfUser = document.querySelector("#followers")
 const followingOfUser = document.querySelector("#following")
 const repoOfUser = document.querySelector("#repositories")
+const profileOfUser = document.querySelector("#profile-box")
 
 async function findUser(user) {
     const responce = await fetch(githubApiUrl + user)
@@ -16,17 +16,24 @@ async function findUser(user) {
         nameOfuser.textContent = "User not found"
     }
     let userData = await responce.json()
+
+    profileOfUser.classList.add("profile-box")
     
-    userLink.href = userData.html_url
-    console.log(userLink.href);
+    userAcLink.href = userData.html_url
+    userAcLink.textContent = `${userData.login}`
     
     avatar.src = userData.avatar_url
-    userName.textContent = `${userData.login}`
     nameOfuser.textContent = `${userData.name}`
     bioOfuser.textContent = `${userData.bio}`
-    followersOfUser.textContent = `${userData.followers}`
-    followingOfUser.textContent = `${userData.following}`
-    repoOfUser.textContent = `${userData.public_repos}`
+
+    followersOfUser.href = userData.followers_url
+    followersOfUser.textContent = `Followers: ${userData.followers}`
+
+    followingOfUser.href = userData.following_url
+    followingOfUser.textContent = `Following: ${userData.following}`
+
+    repoOfUser.href = userData.repos_url
+    repoOfUser.textContent = `Repositories: ${userData.public_repos}`
     inputBar.value = ""
 }
 
