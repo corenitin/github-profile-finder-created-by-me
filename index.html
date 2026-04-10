@@ -10,7 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="shortcut icon" href="github_favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
     <title>Github-Profile-Finder</title>
     <style type="text/tailwindcss">
         @theme{
@@ -18,7 +18,9 @@
         --breakpoint-mobile: 320px
      }
      .profile-box {
-        @apply  border border-gray-300 px-10 py-5 md:w-[350px] mobile:w-[300px]  rounded-xl bg-linear-120 from-gray-950 to-green-800 hover:shadow-lg hover:shadow-gray-800 scroll-smooth
+        @apply  border border-gray-300 px-10 py-5 md:w-[350px] mobile:w-[300px]  
+        rounded-xl bg-linear-120 from-gray-950 to-green-800 hover:shadow-xl hover:shadow-gray-800 scroll-smooth
+        transition duration-700 ease-in-out
      }
     </style>
 </head>
