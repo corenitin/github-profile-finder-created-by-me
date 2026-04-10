@@ -1,4 +1,5 @@
 const githubApiUrl = "https://api.github.com/users/"
+const title = document.querySelector("title")
 const inputBar = document.querySelector("input")
 const searchBtn = document.querySelector("button")
 const userAcLink = document.getElementById("username-link")
@@ -16,6 +17,8 @@ async function findUser(user) {
         nameOfuser.textContent = "User not found"
     }
     let userData = await responce.json()
+
+    title.textContent = userData.login
 
     profileOfUser.classList.add("profile-box")
     
