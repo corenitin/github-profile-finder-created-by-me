@@ -26,13 +26,13 @@ async function findUser(user) {
     nameOfuser.textContent = `${userData.name}`
     bioOfuser.textContent = `${userData.bio}`
 
-    followersOfUser.href = userData.followers_url
+    followersOfUser.href = `https://github.com/${user}?tab=followers`
     followersOfUser.textContent = `Followers: ${userData.followers}`
 
-    followingOfUser.href = userData.following_url
+    followingOfUser.href = `https://github.com/${user}?tab=following`
     followingOfUser.textContent = `Following: ${userData.following}`
 
-    repoOfUser.href = userData.repos_url
+    repoOfUser.href = `https://github.com/${user}?tab=repositories`
     repoOfUser.textContent = `Repositories: ${userData.public_repos}`
     inputBar.value = ""
 }
